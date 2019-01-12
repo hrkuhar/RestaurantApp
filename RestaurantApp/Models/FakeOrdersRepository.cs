@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantApp.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,17 +8,17 @@ namespace RestaurantApp.Models
 {
     public class FakeOrdersRepository : IOrdersRepository
     {
-        private List<Order> orders = new List<Order>();
+        private List<Orders> orders = new List<Orders>();
 
         private int nextId = 1;
 
-        public void AddOrder(Order o)
+        public void AddOrder(Orders o)
         {
-            o.OrderId = nextId++;
+            o.Id = nextId++;
             orders.Add(o);
         }
 
-        public ICollection<Order> GetOrders()
+        public ICollection<Orders> GetOrders()
         {
             return orders;
         }

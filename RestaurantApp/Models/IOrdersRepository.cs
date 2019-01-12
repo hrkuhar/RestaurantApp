@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantApp.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,9 +8,9 @@ namespace RestaurantApp.Models
 {
     public interface IOrdersRepository
     {
-        ICollection<Order> GetOrders();
+        ICollection<Orders> GetOrders();
 
-        void AddOrder(Order o);
+        void AddOrder(Orders o);
 
     }
 }

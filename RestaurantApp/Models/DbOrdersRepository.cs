@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantApp.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,12 +8,12 @@ namespace RestaurantApp.Models
 {
     public class DbOrdersRepository : IOrdersRepository
     {
-        public void AddOrder(Order o)
+        public void AddOrder(Orders o)
         {
             throw new NotImplementedException();
         }
 
-        public ICollection<Order> GetOrders()
+        public ICollection<Orders> GetOrders()
         {
             throw new NotImplementedException();
         }

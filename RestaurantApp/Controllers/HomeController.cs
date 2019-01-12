@@ -114,7 +114,7 @@ namespace RestaurantApp.Controllers
             return View();
         }
 
-        public ViewResult ProcessCheckout(Order order)
+        public ViewResult ProcessCheckout(Orders order)
         {
             order.Time = DateTime.Now;
             order.Cart = GetCart();
