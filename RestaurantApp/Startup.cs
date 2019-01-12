@@ -31,8 +31,6 @@ namespace RestaurantApp
 
             services.AddSingleton<IDishesRepository, EFDishesRepository>();
             services.AddSingleton<IOrdersRepository, EFOrdersRepository>();
-
-            //services.AddSingleton<Cart>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +47,6 @@ namespace RestaurantApp
 
             app.UseStaticFiles();
             app.UseMvc(routes => routes.MapRoute(name: "Default", template: "{controller=Home}/{action=Index}/{id:int?}"));
-
         }
     }
 }

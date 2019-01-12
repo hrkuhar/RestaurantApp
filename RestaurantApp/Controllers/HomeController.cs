@@ -24,14 +24,13 @@ namespace RestaurantApp.Controllers
         {
             if (HttpContext.Session.Get<Cart>("Cart") == null)
             {
-                HttpContext.Session.Set<Cart>("Cart", new Cart()); 
+                HttpContext.Session.Set("Cart", new Cart()); 
             }
             return View();
         }
 
         public ViewResult DishesList()
         {
-            ViewBag.Random = HttpContext.Session.GetInt32("random");
             return View(dRepository.GetDishes());
         }
 
@@ -135,17 +134,15 @@ namespace RestaurantApp.Controllers
             return View(oRepository.GetOrders());
         }
 
-
         private Cart GetCart()
         {
             Cart cart = HttpContext.Session.Get<Cart>("Cart") ?? new Cart();
             return cart;
         }
 
-
         private void SaveCart(Cart cart)
         {
-            HttpContext.Session.Set<Cart>("Cart", cart);
+            HttpContext.Session.Set("Cart", cart);
         }
 
     }
