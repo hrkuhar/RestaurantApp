@@ -6,7 +6,7 @@ using RestaurantApp.Entities;
 
 namespace RestaurantApp.Models
 {
-    public class FakeDishesRepository : IDishesRepository
+    public class ListDishesRepository : IDishesRepository
     {
         private List<Dishes> FakeList = new List<Dishes> {
             new Dishes { Id = 1, Name = "Murgh Curry", Description = "Pieces of chicken cooked in Traditional Indian spices", Price = 65.00m },

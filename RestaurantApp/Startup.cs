@@ -26,10 +26,11 @@ namespace RestaurantApp
             services.AddMemoryCache();
             services.AddSession();
 
-            //services.AddSingleton<IDishesRepository, FakeDishesRepository>();
-            services.AddSingleton<IDishesRepository, EFDishesRepository>();
+            //services.AddSingleton<IDishesRepository, ListDishesRepository>();
+            //services.AddSingleton<IOrdersRepository, ListOrdersRepository>();
 
-            services.AddSingleton<IOrdersRepository, FakeOrdersRepository>();
+            services.AddSingleton<IDishesRepository, EFDishesRepository>();
+            services.AddSingleton<IOrdersRepository, EFOrdersRepository>();
 
             //services.AddSingleton<Cart>();
         }

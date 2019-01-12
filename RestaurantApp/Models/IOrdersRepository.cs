@@ -11,6 +11,5 @@ namespace RestaurantApp.Models
         ICollection<Orders> GetOrders();
 
         void AddOrder(Orders o);
-
     }
 }

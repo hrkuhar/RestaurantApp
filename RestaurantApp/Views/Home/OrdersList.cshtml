@@ -1,4 +1,4 @@
-﻿@model IEnumerable<RestaurantApp.Models.Order>
+﻿@model IEnumerable<RestaurantApp.Entities.Orders>
 
 @{ 
     Layout = null;
@@ -7,7 +7,7 @@
 @foreach (var order in Model)
 {
     <div>
-        Order Id: @order.OrderId
+        Order Id: @order.Id
         Name: @order.Name
         Address: @order.Street @order.Number
         Time: @order.Time

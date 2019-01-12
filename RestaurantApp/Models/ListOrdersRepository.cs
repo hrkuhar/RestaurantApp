@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp.Models
 {
-    public class FakeOrdersRepository : IOrdersRepository
+    public class ListOrdersRepository : IOrdersRepository
     {
         private List<Orders> orders = new List<Orders>();
 
